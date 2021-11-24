@@ -55,6 +55,7 @@ Adds the file and commits it. Works only with modified files.
 git remote add origin [SSH link of the remote repo] 
 ```
 Connects to the remote repository
+* *origin* is actually the location of our git repository
 
 ---
 ```
