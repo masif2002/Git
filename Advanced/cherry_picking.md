@@ -11,8 +11,10 @@ For example, when you accidentally commit to the _main_ branch instead of a _fea
 2. Copy the commit hash of the accidental commit you made on the main branch
 3. And run the command
 ```
- git cherry-pick [hash]
-```
+ git cherry-pick [hash]  
+```  
+  Now the accidental commit from main branch has been picked and committed in the branch, where you actually wanted it to be  
+
 4. And as we learned before, we can clean up the master branch with the help of reset command 
 ```
 git reset --hard HEAD~1
