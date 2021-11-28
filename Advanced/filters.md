@@ -8,7 +8,7 @@ You can filter commits in git.
 ```
 git log --before=[date]
 ```
-`--after` is used to get commits before a certain date
+`--after` is used to get commits after a certain date
 ```
 git log --after=[date]
 ```
