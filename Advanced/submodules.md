@@ -25,8 +25,6 @@ This command initialises all the submodules automatically after cloning
 
 ## Checked Out Revision
 
-When you checkout from a branch (A), then the last commit on this branch is the checked out revision on the new branch (B).  
-And as you add commits to the new branch (B), the latest commit is the checked out revision.
+When you checkout from a branch (A), then the last commit on this branch is the checked out revision on the new branch (B). And as you add commits to the new branch (B), the latest commit is the checked out revision.
 
-But, a submodule git repository is checked out on a specific commit.  
- When a new commit happens, the checked out commit does not change.
+But, a submodule git repository is checked out on a specific commit. When a new commit happens, the checked out commit does not change.
