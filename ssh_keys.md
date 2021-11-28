@@ -1,4 +1,4 @@
-## SSH Keys
+# SSH Keys
 
 ### 1. Generating SSH key
 ___
@@ -34,4 +34,13 @@ $ eval "$(ssh-agent -s)"
 ```
 $ ssh-add ~/.ssh/id_rsa
 ```
-You need to replace *id_rsa* with the name of your private key file
+You need to replace *id_rsa* with the name of your private key file  
+  
+  
+    
+ 
+  
+  
+### References
+----
+https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
