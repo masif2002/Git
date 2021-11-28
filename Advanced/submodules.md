@@ -16,14 +16,17 @@ git submodule add [URL of the repo]
 
 When you clone a repository that contains submodules, the files of the submodules won't be present as we have learnt earlier that a parent repository does not store a submodule's content but only it's configuration. 
 
-So for cloning a repo with submodules, we use the following command. This command initialises all the submodules automatically after cloning
+So for cloning a repo with submodules, we use the following command. 
 
 ```
 git clone --recurse-submodules [URL of the repo]
 ```
+This command initialises all the submodules automatically after cloning
 
 ## Checked Out Revision
 
-When you checkout from a branch (A), then the last commit on this branch is the checked out revision on the new branch (B). And as you add commits to the new branch (B), the latest commit is the checked out revision.
+When you checkout from a branch (A), then the last commit on this branch is the checked out revision on the new branch (B).  
+And as you add commits to the new branch (B), the latest commit is the checked out revision.
 
-But, a submodule git repository is checked out on a specific commit. When a new commits happen, the checked out commit does not change.
+But, a submodule git repository is checked out on a specific commit.  
+ When a new commit happens, the checked out commit does not change.
