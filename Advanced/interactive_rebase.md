@@ -153,4 +153,8 @@ Commit message rewritten
 > * **_Esc_** - to come out of the editing interface
 > * **_:x!_** - for save and exit
 
+You can also push the changes to the remote repository by
+```
+git push --force origin master
+```
 
