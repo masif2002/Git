@@ -162,6 +162,7 @@ It actually resets the pointer which is currently pointing to **HEAD** (the late
 git log 
 ```
 Displays the log of all the commits  
+* Adding `--oneline` flag will display a shorter version of the commits, each per line
 
 ----
 
