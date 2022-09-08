@@ -76,7 +76,14 @@ Pushes all the committed files to the **master** branch in the remote repository
 git push
 ```
 Pushes directly to _origin master_ since the default location has been set to it in the previous command.
-
+___
+```
+git rm --cached <file_name>
+```
+* Removes the file from your repo but not locally
+  * This is useful when you've accidentally committed a file
+  * `-f` flag is used to remove it locally aswell
+ > Files that are committed already would not have any effect if the file is added to .gitignore. You should `git rm --cached` first, for it to take effect
 ---
 ---
 ## Branching
