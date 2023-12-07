@@ -1,5 +1,5 @@
 ## Steps to set-up SSH keys for GitHub in Ubuntu
-> This method is useful when you want to setup SSH keys for multiple accounts
+>  [Resource: Setting up multiple git identities](https://gist.github.com/bgauduch/06a8c4ec2fec8fef6354afe94358c89e)  
 
 ## Walkthrough
 1. First you need to generate an SSH key and save it save it in `~/.ssh/github/`
@@ -38,22 +38,16 @@
     [init]
 	defaultBranch = ""
     ```
-
-4. Create a github configuration file at account level (`~/clients/git/<github_uname>/gitconfig.<github_uname>`)
-    * Here, inside the `git` folder, you'll have your multiple GitHub accounts and their config files inside it
-    ```
-    [user]
-    email = <github_email>
-    name = <github_name>
-    
-    [github]
-    user = <github_username>
-    ```
-
+    * If you want to add multiple identities instead of a single one, you can do so
+        ```
+         [includeIf "gitdir:~/code/personal/"]
+            path = .gitconfig-personal
+         [includeIf "gitdir:~/code/professional/"]
+            path = .gitconfig-professional
+        ```
 5. Next step is to add the ssh keys that we created
     ```
     ssh-add ~/.ssh/github/<private_ssh_key> 
-    ssh-keyscan >> ~.ssh/known_hosts
     ```
 
 6. Now, we add the public ssh key (`~/.ssh/github/<ssh_key>.pub`) in our GitHub account from the web browser
@@ -65,13 +59,10 @@
     ```
     * You mention the host with `-T` flag. This is the host that we mentioned in the `~/.ssh/config` file
 
-## Multi-account SSH Key setup
-You follow the same steps to add another GitHub account. But, you don't need to modify anything inside the global configuration file because the local configuration file inside `~/git/clients/<github_uname>/` will override the global config file, thus providing the right credentials.
-___
-> Note:   
->When you perform git operations (pull/clone) with the repo, make sure you mention the correct hostname. For example, 
-```
-SSH Link from GitHub repository (Browser) -> git@github.com:masif2002/fastapi.git
-Incorrect 'clone' command -> git clone git@github.com:masif2002/fastapi.git
-Correct 'clone' command -> git clone git@github.com-masif2002:masif2002/fastapi.git
-```
+### Note   
+* When you perform git operations (pull/clone) with the repo, make sure you mention the correct hostname. For example, 
+    ```
+    SSH Link from GitHub repository (Browser) -> git@github.com:masif2002/fastapi.git
+    Incorrect 'clone' command -> git clone git@github.com:masif2002/fastapi.git
+    Correct 'clone' command -> git clone git@github.com-masif2002:masif2002/fastapi.git
+    ```
