@@ -45,6 +45,13 @@
          [includeIf "gitdir:~/code/professional/"]
             path = .gitconfig-professional
         ```
+5. You can start the ssh-agent manually by running     
+`eval "$(ssh-agent -s)"`
+
+```
+$ eval "$(ssh-agent -s)"
+> Agent pid 59566
+```
 5. Next step is to add the ssh keys that we created
     ```
     ssh-add ~/.ssh/github/<private_ssh_key> 
